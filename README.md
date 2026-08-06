@@ -1,6 +1,6 @@
 # Retail Performance Analytics
 
-End-to-end data pipeline (bronze → silver → gold) and Power BI dashboard analyzing retail order data, built to evaluate profitability and revenue health for a finance/executive audience.
+End-to-end data pipeline (bronze → silver → gold) with star-schema and Power BI dashboard analyzing retail order data, built to evaluate profitability and revenue health for a finance/executive audience.
 
 ## Problem Statement
 
