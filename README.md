@@ -4,7 +4,7 @@ End-to-end data pipeline (bronze → silver → gold) with star-schema and Power
 
 ## Problem Statement
 
-Leadership has visibility into total revenue, but not into where and whether that revenue is actually profitable, whether growth reflects healthy demand, or whether customer satisfaction is a reliable early-warning signal. This project evaluates profitability across product categories, tracks whether revenue growth is accompanied by rising or falling average order value, and tests whether customer satisfaction and retention correlate with revenue — to give finance a clearer, evidence-based view of business health beyond top-line numbers.
+Management has visibility into total revenue, but not into where and whether that revenue is actually profitable, whether growth reflects healthy demand, or whether customer satisfaction is a reliable early-warning signal. This project evaluates profitability across product categories, tracks whether revenue growth is accompanied by rising or falling average order value, and tests whether customer satisfaction and retention correlate with revenue to give finance a clearer, evidence-based view of business health beyond top-line numbers.
 
 ## Questions
 
