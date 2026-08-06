@@ -19,7 +19,7 @@ Management has visibility into total revenue, but not into where and whether tha
 - Verified: `customer_id` overlaps between both files, but customer_data's self-reported purchase history has ~0 correlation with actual order_data behavior (r = 0.0146) — the two tables are not truly relationally linked. Only `customer_id` and `review_rating` are carried into the gold layer from customer_data.
 
 ## Pipeline
-![Project Pipeline](portofolio_pipeline_v2.png)
+![Project Pipeline](portfolio_pipeline_v2.png)
 **Bronze → Silver** (`notebooks/data-cleaning.ipynb`, Python/pandas)
 - Standardized column names, deduplicated rows, normalized inconsistent category labels
 - Median-imputed skewed numeric nulls, flagged categorical nulls as "Unknown"
