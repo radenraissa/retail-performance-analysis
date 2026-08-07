@@ -14,7 +14,7 @@ Management has visibility into total revenue, but not into where and whether tha
 
 ## Data
 
-- `order_data.csv` — 9,994 order-level transactions (2022–2023): category, sub-category, product, cost/list price, discount, quantity, customer_id.
+- `order_data.csv` — 9,994 order-level transactions (2022–2023): category, sub-category, product, cost_price, list price, discount, quantity, customer_id.
 - `customer_data.csv` — 5,050 customer records: demographics, review_rating, subscription/purchase behavior fields.
 - Verified: `customer_id` overlaps between both files, but customer_data's self-reported purchase history has ~0 correlation with actual order_data behavior (r = 0.0146) — the two tables are not truly relationally linked. Only `customer_id` and `review_rating` are carried into the gold layer from customer_data.
 
@@ -37,7 +37,7 @@ Management has visibility into total revenue, but not into where and whether tha
 
 ## Key Findings
 
-- Profit margin is consistent (~10–13.5%) across all sub-categories — no category is meaningfully more/less efficient on margin. However, ~44% of all transactions have zero margin (cost = list price), concentrated most heavily in Office Supplies (57% of its rows).
+- Profit margin is consistent (~10–13.5%) across all sub-categories — no category is meaningfully more/less efficient on margin. However, ~44% of all transactions have zero margin (cost = list price), concentrated most heavily in Office Supplies.
 - Office Supplies drives high order volume but contributes less total profit than Technology or Furniture.
 - Revenue and AOV move together month over month — growth is not diluted by a shift toward cheaper orders.
 - Customer review rating shows no correlation with customer revenue — not a reliable early-warning signal.
@@ -45,7 +45,7 @@ Management has visibility into total revenue, but not into where and whether tha
 ## Repo Structure
 
 ```
-data/           raw CSVs
+data/           raw CSVs, silver CSVs
 sql/            schema.sql (silver DDL), silver_to_gold.sql (gold build)
 data-cleaning.ipynb 
 dasbor.pbix
