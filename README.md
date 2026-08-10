@@ -60,12 +60,12 @@ dasbor.pbix
 
 ## How to Use
 
-**View only:** open `dashboard/sasbor.pbix` in Power BI Desktop (free). Data is cached in the file — no database connection needed.
+**View only:** open `bi-dashboard.pbix` in Power BI Desktop (free). Data is cached in the file — no database connection needed.
 
 **Reproduce the pipeline:**
 1. Set up a local PostgreSQL instance
 2. Run `sql/schema.sql` to create the silver-layer tables
 3. Import `data/customer_data.csv` and `data/order_data.csv`
-4. Run `notebooks/data-cleaning.ipynb` to clean bronze → silver
+4. Run `data-cleaning.ipynb` to clean bronze → silver
 5. Run `sql/silver_to_gold.sql` to build the gold star schema
 6. Open the `.pbix`, update the Postgres connection under Transform Data → Data Source Settings, refresh
