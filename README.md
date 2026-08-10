@@ -35,12 +35,19 @@ Management has visibility into total revenue, but not into where and whether tha
 - Imported from Postgres `gold` schema, relationships modeled in star schema
 - DAX measures: Total Revenue, Total Profit, Profit Margin, Order Count, AOV, Avg Review Rating
 
+## Dashboard Result
+![Result](dasbor-image.png)
+
 ## Key Findings
 
-- Profit margin is consistent (~10–13.5%) across all sub-categories — no category is meaningfully more/less efficient on margin. However, ~44% of all transactions have zero margin (cost = list price), concentrated most heavily in Office Supplies.
+- Fasteners (Office Supplies) sits at 5.74% margin, a clear outlier below the rest of the range (~9.2–14%)
 - Office Supplies drives high order volume but contributes less total profit than Technology or Furniture.
 - Revenue and AOV move together month over month — growth is not diluted by a shift toward cheaper orders.
-- Customer review rating shows no correlation with customer revenue — not a reliable early-warning signal.
+- Customer review rating shows no correlation with customer revenue, while retained customers generate roughly 50% higher average revenue than non-retained customers
+
+## Recommendations
+1. Re-evaluate whether high order volume in Office Supplies is worth the operational cost.
+2. Invest in retention-focused initiatives, since retention is the metric that actually moves revenue.
 
 ## Repo Structure
 
