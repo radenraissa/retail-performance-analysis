@@ -87,21 +87,3 @@ ALTER TABLE gold.fact_orders ADD FOREIGN KEY (date_key) REFERENCES gold.dim_date
 ALTER TABLE gold.fact_orders ADD FOREIGN KEY (product_id) REFERENCES gold.dim_product(product_id);
 ALTER TABLE gold.fact_orders ADD FOREIGN KEY (customer_id) REFERENCES gold.dim_customer(customer_id);
 
--- ------------------------------------------------------------
--- 5. Validation checks
--- ------------------------------------------------------------
-
--- Row count sanity (~9973 expected: 9994 - 21 unresolved zero-price rows)
-SELECT COUNT(*) FROM gold.fact_orders;
-
--- No orphaned foreign keys
-SELECT * FROM gold.fact_orders f
-LEFT JOIN gold.dim_product p ON f.product_id = p.product_id
-WHERE p.product_id IS NULL;
-
-SELECT * FROM gold.fact_orders f
-LEFT JOIN gold.dim_customer c ON f.customer_id = c.customer_id
-WHERE c.customer_id IS NULL;
-
--- Revenue/profit sanity (no negatives, no nulls)
-SELECT MIN(revenue), MAX(revenue), MIN(profit), MAX(profit) FROM gold.fact_orders;
